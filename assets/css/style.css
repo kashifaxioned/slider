@@ -123,6 +123,7 @@ li {
 .carousel-container {
   height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
@@ -131,9 +132,10 @@ li {
  
  .carousel li { overflow: hidden; }
  
- .slide2, .slide3 {display: none;}
+ .slide1, .slide2, .slide3 {display: none;}
  
  .slide-controls {
+   width: inherit;
    padding: 21px 33px 26px;
    display: flex;
    justify-content: space-between;
@@ -166,9 +168,21 @@ li {
  
  .left-btn::before { content: "\f104"; }
 
+ .show { display: block; }
 
+ .forward{ animation: slideLeft 1s; }
 
+.backward{ animation: slideRight 1s; }
 
+ @keyframes slideLeft {
+  from { transform: translateX(100%); }
+  to {  transform: translateX(0); }
+ }
+ 
+ @keyframes slideRight {
+   from { transform: translateX(-100%); }
+   to {  transform: translateX(0); }
+  }
 
 
 /*=================================
