@@ -121,6 +121,10 @@ li {
 =================================*/
 
 .carousel-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   color: #fff;
  }
@@ -130,14 +134,9 @@ li {
  .slide2, .slide3 {display: none;}
  
  .slide-controls {
-   max-width: 60%;
    padding: 21px 33px 26px;
    display: flex;
    justify-content: space-between;
-   position: absolute;
-   bottom: 4px;
-   left: 0;
-   right: 0;
    margin: 0 auto;
    background-color: #dc6226;
  }
@@ -149,7 +148,7 @@ li {
    text-align: center;
    text-transform: uppercase;
  }
- 
+
  .control-btn {
    border: none;
    background-color: inherit;
