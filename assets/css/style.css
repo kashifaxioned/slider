@@ -120,11 +120,69 @@ li {
   main styling starts here
 =================================*/
 
+.carousel-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: #fff;
+ }
+ 
+ .carousel li { overflow: hidden; }
+ 
+ .slide1, .slide2, .slide3 {display: none;}
+ 
+ .slide-controls {
+   width: inherit;
+   padding: 21px 33px 26px;
+   display: flex;
+   justify-content: space-between;
+   margin: 0 auto;
+   background-color: #dc6226;
+ }
+ 
+ .slide1-info, .slide2-info, .slide3-info {
+   flex-basis: 65%;
+   font-size: 50px;
+   font-weight: 800;
+   text-align: center;
+   text-transform: uppercase;
+ }
 
+ .control-btn {
+   border: none;
+   background-color: inherit;
+   color: inherit;
+   font-family: "FontAwesome";
+   font-size: 52px;
+ }
+ 
+ .control-btn:hover {
+   transform: scale(1.3);
+   transition: transform 0.2s ease-in;
+ }
+ 
+ .right-btn::before { content: "\f105"; }
+ 
+ .left-btn::before { content: "\f104"; }
 
+ .show { display: block; }
 
+ .forward{ animation: slideLeft 1s; }
 
+.backward{ animation: slideRight 1s; }
 
+ @keyframes slideLeft {
+  from { transform: translateX(100%); }
+  to {  transform: translateX(0); }
+ }
+ 
+ @keyframes slideRight {
+   from { transform: translateX(-100%); }
+   to {  transform: translateX(0); }
+  }
 
 
 /*=================================
