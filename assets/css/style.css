@@ -120,6 +120,8 @@ li {
   main styling starts here
 =================================*/
 
+* { overflow: hidden; }
+
 .carousel-container {
   height: 100vh;
   display: flex;
